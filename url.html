@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(120deg, #232526 0%, #414345 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1.5px solid rgba(56, 189, 248, 0.18);
+        padding: 40px 32px 32px 32px;
+        max-width: 480px;
+        width: 100%;
+        margin: 40px 0;
+      }
+
+      h1 {
+        text-align: center;
+        color: #fbbf24;
+        font-size: 2.2em;
+        margin-bottom: 12px;
+        letter-spacing: 1.5px;
+        text-shadow: 0 2px 12px #38bdf844;
+      }
+
+      .section-title {
+        color: #38bdf8;
+        font-size: 1.2em;
+        margin: 32px 0 16px 0;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 18px 0;
+      }
+
+      .card {
+        background: rgba(56, 189, 248, 0.08);
+        border-radius: 14px;
+        margin: 14px 0;
+        padding: 18px 20px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        box-shadow: 0 2px 12px rgba(56, 189, 248, 0.1);
+        transition: background 0.2s, transform 0.15s;
+        border: 1.5px solid transparent;
+      }
+
+      .card:hover {
+        background: rgba(251, 191, 36, 0.13);
+        border: 1.5px solid #fbbf24;
+        transform: translateY(-2px) scale(1.025);
+      }
+
+      .icon {
+        font-size: 1.5em;
+        color: #38bdf8;
+        min-width: 32px;
+        text-align: center;
+      }
+
+      .card:hover .icon {
+        color: #fbbf24;
+      }
+
+      .label {
+        color: #fbbf24;
+        font-weight: 600;
+        min-width: 110px;
+        font-size: 1.08em;
+      }
+
+      a {
+        color: #38bdf8;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.07em;
+        margin-left: 8px;
+        word-break: break-all;
+      }
+
+      .card:hover a {
+        color: #fbbf24;
+        text-decoration: underline wavy #fbbf24;
+      }
+
+      @media (max-width: 600px) {
+        .glass {
+          padding: 18px 4vw 12px 4vw;
+          max-width: 98vw;
+        }
+        .card {
+          padding: 12px 6px;
+          font-size: 0.98em;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="glass">
+      <h1><i class="fa-solid fa-book-open"></i> Menu</h1>
+
+      <div class="section-title">
+        <i class="fa-solid fa-shield-keyhole"></i> Authentication API
+      </div>
+      <ul>
+        <li class="card">
+          <span class="icon"><i class="fa-solid fa-user-plus"></i></span>
+          <span class="label">User Register:</span>
+          <a href="http://127.0.0.1:8000/apiframe/user/register/"
+            >/apiframe/user/register/</a
+          >
+        </li>
+        <li class="card">
+          <span class="icon"><i class="fa-solid fa-lock"></i></span>
+          <span class="label">Get Token:</span>
+          <a href="http://127.0.0.1:8000/apiframe/token/">/apiframe/token/</a>
+        </li>
+        <li class="card">
+          <span class="icon"><i class="fa-solid fa-refresh"></i></span>
+          <span class="label">Refresh Token:</span>
+          <a href="http://127.0.0.1:8000/apiframe/token/refresh/"
+            >/apiframe/token/refresh/</a
+          >
+        </li>
+      </ul>
+
+      <div class="section-title">
+        <i class="fa-solid fa-database"></i> Data API
+      </div>
+      <ul>
+        <li class="card">
+          <span class="icon"><i class="fa-solid fa-sticky-note"></i></span>
+          <span class="label">Notes List:</span>
+          <a href="http://127.0.0.1:8000/apiframe/notes/">/apiframe/notes/</a>
+        </li>
+        <li class="card">
+          <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          <span class="label">Students API:</span>
+          <a href="http://127.0.0.1:8000/apiframe/students/"
+            >/apiframe/students/</a
+          >
+        </li>
+        <li class="card">
+          <span class="icon"><i class="fa-solid fa-book"></i></span>
+          <span class="label">Books API:</span>
+          <a href="http://127.0.0.1:8000/apiframe/books/">/apiframe/books/</a>
+        </li>
+      </ul>
+
+      <div class="section-title"><i class="fa-solid fa-cogs"></i> Admin</div>
+      <ul>
+        <li class="card">
+          <span class="icon"><i class="fa-solid fa-user-gear"></i></span>
+          <span class="label">Admin Panel:</span>
+          <a href="http://127.0.0.1:8000/admin/">/admin/</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
